@@ -1,38 +1,556 @@
-.App {
-  text-align: center;
+/* phones  */
+* {
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media (max-width: 480px) {
+  body {
+    background-image: url('../public/images/pexels-lazybird-1212600.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+  }
+  .input{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .input input{
+    width: 220px;
+    height: 20px;
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid #373737;
+    background-color: #00000029;
+    padding: 10px;
+    color: #fff;
+  }
+  .input button {
+    width: 75px;
+    border-radius: 20px;
+    border: 2px solid #373737;
+    background-color: #00000029;
+    color: #fff;
+  }
+  .input input::placeholder {
+    color: white;
+  }
+  .weather{
+    margin: 20px;
+    background: rgb(21 20 20 / 37%);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .city{
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: cursive;
+  }
+  .temperature{
+    color: #fff;
+    font-size: 3.5rem;
+    font-family: cursive;
+  }
+  .temperature2{
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: cursive;
+    font-weight: normal;
+  }
+  .view{
+    color: #fff;
+    font-size: 1.4rem;
+    margin-top: 10px;
+    font-family: cursive;
+  }
+  .windSpeed{
+    color: #fff;
+    font-size: 1.4rem;
+    margin-top: 10px;
+    font-family: cursive;
+  }
+  .humidity{
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-family: cursive;
+  }
+  .forecastContainer{
+    margin: 20px 20px 5px 20px;
+    background: rgb(21 20 20 / 72%);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hour{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 3px;
+  }
+  h4, p {
+    color: #fff;
+    font-family: cursive;
+  }
+  h5{
+    color: #fff;
+    font-family: cursive;
+    font-size: 1rem;
+  }
+  footer{
+    display: flex;
+    justify-content: center;
+  }
+  footer p{
+    color: #45ff9e;
+  }
+  .noData{
+    color: #fff;
+    background-color: rgb(21 20 20 / 72%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    margin: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-family: cursive;
+  }
+  .searchDisplay{
+    display: none;
+  }
+  .weatherDisplay{
+    display: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    background-image: url('../public/images/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
   }
-  to {
-    transform: rotate(360deg);
+  .input{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .input input{
+    width: 220px;
+    height: 20px;
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid #373737;
+    background-color: #00000029;
+    padding: 10px;
+    color: #fff;
+  }
+  .input button {
+    width: 75px;
+    border-radius: 20px;
+    border: 2px solid #373737;
+    background-color: #00000029;
+    color: #fff;
+  }
+  .input input::placeholder {
+    color: white;
+  }
+  .weather{
+    margin: 40px;
+    background: rgb(21 20 20 / 37%);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  .city{
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: cursive;
+  }
+  .temperature{
+    color: #fff;
+    font-size: 3.5rem;
+    font-family: cursive;
+  }
+  .temperature2{
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: cursive;
+    font-weight: normal;
+  }
+  .view{
+    color: #fff;
+    font-size: 1.4rem;
+    margin-top: 10px;
+    font-family: cursive;
+  }
+  .windSpeed{
+    color: #fff;
+    font-size: 1.4rem;
+    margin-top: 10px;
+    font-family: cursive;
+  }
+  .humidity{
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-family: cursive;
+  }
+  .forecastContainer{
+    margin: 40px;
+    background: rgb(21 20 20 / 72%);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hour{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 3px;
+  }
+  h4, p {
+    color: #fff;
+    font-family: cursive;
+  }
+  h5{
+    color: #fff;
+    font-family: cursive;
+    font-size: 1rem;
+  }
+  footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  footer p{
+    color: #45ff9e;
+  }
+  .noData{
+    color: #fff;
+    background-color: rgb(21 20 20 / 72%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    margin: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-family: cursive;
+  } 
+  .searchDisplay{
+    display: none;
+  }
+  .weatherDisplay{
+    display: none;
+  }
+}
+
+/* laptops/desktops  */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    background-image: url('../public/images/mount-mont-blanc-covered-snow-reflecting-water-evening-chamonix-france.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .weatherContainer{
+    display: none;
+  }
+  .forecastContainer{
+    display: none;
+  }
+  .container{
+    width: 70vw;
+    height: 80vh;
+    display: flex;
+  }
+  .weatherDisplay{
+    background-image: url('../public/images/dark-fantasy-scene.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 65%;
+  }
+  .searchDisplay{
+    background: rgb(21 20 20 / 72%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 10px solid rgba(26, 24, 24, 0.76);;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .searchDisplay .image {
+    width: 120px;
+    height: 100px;
+  }
+  img{
+    width: 100%;
+  }
+  .subContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    height: 100%;
+    justify-content: space-between;
+  }
+  .cityName{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .day-temp{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: last baseline;
+  }
+  .city{
+    color: #fff;
+  }
+  .country{
+    color: #fff;
+  }
+  .dateTime h2{
+    color: #fff;
+  }
+  .dateTime h5{
+    color: #fff;
+  }
+  .temperature{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .temperature h1{
+    color: #fff;
+  }
+  .temperature h3{
+    color: #fff;
+    font-size: 0.8rem;
+  }
+
+  .searchDisplay h2{
+    color: #fff;
+  }
+  .input{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+  }
+  .input .image{
+    width: 30px;
+    height: 30px;
+  }
+  .input input{
+    background-color: #00000000;
+    border: none;
+    border-bottom: 2px solid rgb(96, 93, 93);
+    padding: 5px;
+    color: #fff;
+    width: 70%;
+  }
+  input::placeholder{
+    color: #fff;
+  }
+  input:focus{
+    outline: none;
+  }
+  img{
+    width: 100%;
+  }
+  .noData{
+    color: white;
+    margin-top: 40%;
+    text-align: center;
+  }
+  .info{
+    width: 90%;
+  }
+  .info li{
+    list-style: none;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(96, 93, 93);
+    padding: 4px;
+    margin: 4px;
+  }
+  .info span{
+    font-size: 0.8rem;
+  }
+  footer{
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+/* Large devices (large desktops) */
+@media (min-width: 1025px) {
+  body {
+    background-image: url('../public/images/mount-mont-blanc-covered-snow-reflecting-water-evening-chamonix-france.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .weatherContainer{
+    display: none;
+  }
+  .forecastContainer{
+    display: none;
+  }
+  .container{
+    width: 70vw;
+    height: 80vh;
+    display: flex;
+  }
+  .weatherDisplay{
+    background-image: url('../public/images/dark-fantasy-scene.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 65%;
+  }
+  .searchDisplay{
+    background: rgb(21 20 20 / 72%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 10px solid rgba(26, 24, 24, 0.76);;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .searchDisplay .image {
+    width: 120px;
+    height: 100px;
+  }
+  img{
+    width: 100%;
+  }
+  .subContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    height: 100%;
+    justify-content: space-between;
+  }
+  .cityName{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .day-temp{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: last baseline;
+  }
+  .city{
+    color: #fff;
+  }
+  .country{
+    color: #fff;
+  }
+  .dateTime h2{
+    color: #fff;
+  }
+  .dateTime h5{
+    color: #fff;
+  }
+  .temperature{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .temperature h1{
+    color: #fff;
+  }
+  .temperature h3{
+    color: #fff;
+    font-size: 0.8rem;
+  }
+
+  .searchDisplay h2{
+    color: #fff;
+  }
+  .input{
+    display: flex;
+    margin: 10px 0;
+  }
+  .input .image{
+    width: 30px;
+    height: 30px;
+  }
+  .input input{
+    background-color: #00000000;
+    border: none;
+    border-bottom: 2px solid rgb(96, 93, 93);
+    padding: 5px;
+    color: #fff;
+  }
+  input::placeholder{
+    color: #fff;
+  }
+  input:focus{
+    outline: none;
+  }
+  img{
+    width: 100%;
+  }
+  .noData{
+    color: white;
+    margin-top: 40%;
+    text-align: center;
+  }
+  .info{
+    width: 90%;
+  }
+  .info li{
+    list-style: none;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(96, 93, 93);
+    padding: 5px;
+    margin: 5px;
+  }
+  .info span{
+    font-size: 0.8rem;
+  }
+  footer{
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
   }
 }
